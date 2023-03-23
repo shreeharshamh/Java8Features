@@ -11,8 +11,8 @@ by try-catch-finally block or throws keyword
 Errors are caused do to lack of system resources but not by the program. They are non-recoverable 
 by prgrammer.
 
-
-Exception   -----> Runtime Exception
+Partially Checked
+Exception   -----> Runtime Exception                    Unchecked Exception
                 -----> Arithmetic Exception
                 -----> NullPointer Exception
                 -----> IndexOutOfBounds Exception
@@ -23,13 +23,14 @@ Exception   -----> Runtime Exception
             
             -----> Remote Exception
             
-            -----> IO Exception
+            -----> IO Exception                         Checked Exception
                 -----> EndOfFileException
                 -----> FileNotFoundException
             
-            -----> Servlet Exception 
+            -----> Servlet Exception                    Checked Exception
             -----> etc...
 
+Unchecked
 Error       -----> VMError
                 -----> StackOverFlow Error
                 -----> OutOfMemory Error
@@ -37,3 +38,13 @@ Error       -----> VMError
                 -----> VerifyError
             -----> Assertion Error
             -----> ExceptionInInitialization
+
+1. IO Exception             Checked (Fully Checked)
+2. Runtime Exception        Unchecked
+3. Interrupted Exception    Checked (Fully Checked)
+4. Error                    Unchecked
+5. Throwable                Checked (Partially Checked)
+6. ArithmeticException      Unchecked
+7. NullPointerException     Unchecked
+8. Exception                Checked (Partially Checked)
+9. FileNotFoundException    Checked (Fully Checked)
